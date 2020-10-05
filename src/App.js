@@ -27,6 +27,9 @@ function App() {
             <Route exact path='/'>
               <Header></Header>
             </Route>
+            <Route  path='/home'>
+              <Header></Header>
+            </Route>
             <PrivateRoute path='/register/:id'>
               <Register></Register>
             </PrivateRoute>

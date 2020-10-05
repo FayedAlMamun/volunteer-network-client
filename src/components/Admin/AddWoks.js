@@ -10,7 +10,7 @@ const AddWoks = () => {
         const description = document.getElementById('description').value
         const date = document.getElementById('date').value
         const event = { name: name, description: description, date: date }
-        if (name && description && date) {
+        if (name && description) {
             fetch('https://fierce-mesa-96484.herokuapp.com/addWorks', {
                 method: 'POST',
                 headers: {
