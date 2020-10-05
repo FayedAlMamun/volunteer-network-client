@@ -10,7 +10,7 @@ const AddWoks = () => {
         const description = document.getElementById('description').value
         const date = document.getElementById('date').value
         const event = { name: name, description: description, date: date }
-        if (name && description) {
+         
             fetch('https://fierce-mesa-96484.herokuapp.com/addWorks', {
                 method: 'POST',
                 headers: {
@@ -18,7 +18,7 @@ const AddWoks = () => {
                 },
                 body: JSON.stringify(event)
             })
-        }
+        
         e.preventDefault();
     }
     return (
@@ -39,7 +39,7 @@ const AddWoks = () => {
 
             </div>
             <div className="d-flex justify-content-center mt-5">
-                <form className='shadow '>
+                <form  onSubmit={handleSubmit} className='shadow '>
                     <div className="d-flex m-3">
                         <div>
                             <h5 className='mt-3'>Event Title</h5>
@@ -51,11 +51,11 @@ const AddWoks = () => {
                             <h5 className='mt-3'>Event Date</h5>
                             <input type="date" name="date" id="date" required className='eventInputBox' />
                             <h5 className='mt-3'>Banner</h5>
-                            <button className='upload'>Upload</button>
+                            <p  className='upload'>Upload</p>
                         </div>
                     </div>
                     <div className="d-flex justify-content-end">
-                        <button onClick={handleSubmit} className='addEventBtn bg-success'>Submit</button>
+                        <button type='submit' className='addEventBtn bg-success'>Submit</button>
                     </div>
                 </form>
             </div>
