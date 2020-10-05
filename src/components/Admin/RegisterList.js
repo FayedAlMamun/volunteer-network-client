@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const RegisterList = () => {
     const [registers,setRegisters]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/registersList')
+        fetch('https://fierce-mesa-96484.herokuapp.com/registersList')
         .then(res=>res.json())
         .then(data=>{
            setRegisters(data);
@@ -18,7 +18,7 @@ const RegisterList = () => {
         const div=document.getElementById(id)
         console.log(document.getElementById(id))
         div.style.display='none';
-        fetch(`http://localhost:5000/deleteEvent/${id}`,{
+        fetch(`https://fierce-mesa-96484.herokuapp.com/deleteEvent/${id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

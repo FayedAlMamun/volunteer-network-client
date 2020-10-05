@@ -17,3 +17,10 @@
     border: none;
     outline: none;
 }
+.seeEventsBtn{
+    background-color: goldenrod;
+    height: 35px;
+    width: 350px;
+    border: none;
+    outline: none;
+}
